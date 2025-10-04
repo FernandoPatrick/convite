@@ -330,16 +330,16 @@ body, html {
     }
 
     .frase {
-        font-size: 100%;
-        margin-top: -20%;
-        margin-bottom: 2rem;
+        font-size: 80%;
+        margin-top: -18%;
+        margin-bottom: 1rem;
         line-height: 1.1;
     }
 
     .nomes {
-        font-size: 10vw;
+        font-size: 9vw;
         line-height: 0.7;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         margin-top: 20px;
     }
 
@@ -352,22 +352,22 @@ body, html {
     }
 
     .convocacao {
-                font-size: 14px;
+                font-size: 13px;
         margin-bottom: 15px;
     }
 
     .info-data {
-        font-size: 1.5rem;
+        font-size: 1rem;
         gap: 0.5rem;
     }
 
     .info-data .barra {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
         margin: 0 0.4rem;
     }
 
     .info-hora {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         margin-top: 0.2rem;
         margin-bottom: 2.5rem;
         margin-left: -15px;
@@ -385,14 +385,16 @@ body, html {
     }
 
     .botoes-info img {
-        width: 40px;
-        height: 50px;
+              width: 30px;
+        height: 39px;
         max-width: initial;
         max-height: initial;
+        margin-top: -50%;
     }
 
     .botoes-info a:nth-child(2) {
         height: 20px;
+        margin-top: 4%;
     }
 
     .ramo-topo {
@@ -424,7 +426,7 @@ body, html {
     }
 
     .borboleta-3 {
-        bottom: 67%;
+        bottom: 60%;
         left: 8%;
         width: 7%;
     }
@@ -449,7 +451,7 @@ body, html {
 
     .noivos-ilustracao {
       bottom: -2%;
-        width: 48%;
+        width: 45%;
         margin-left: 6%;
     }
 
