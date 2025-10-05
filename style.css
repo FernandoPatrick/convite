@@ -330,8 +330,156 @@ body, html {
     }
 
     .frase {
-        font-size: 80%;
+        font-size: 95%;
         margin-top: -18%;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .nomes {
+        font-size: 9vw;
+        line-height: 0.7;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .nomes .nome-fernando {
+        margin-left: -60px;
+    }
+
+    .nomes .nome-rose {
+        margin-right: -100px;
+    }
+
+    .convocacao {
+                font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .info-data {
+        font-size: 1.2rem;
+        gap: 0.5rem;
+    }
+
+    .info-data .barra {
+        font-size: 0.5rem;
+        margin: 0 0.4rem;
+    }
+
+    .info-hora {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+        margin-bottom: 2.5rem;
+        margin-left: -15px;
+    }
+
+    .botoes-info {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .botoes-info a {
+        font-size: 0.8rem;
+    }
+
+    .botoes-info img {
+              width: 30px;
+        height: 39px;
+        max-width: initial;
+        max-height: initial;
+        margin-top: -50%;
+    }
+
+    .botoes-info a:nth-child(2) {
+        height: 20px;
+        margin-top: 4%;
+    }
+
+    .ramo-topo {
+        top: 0%;
+        left: -5%;
+        width: 47%;
+    }
+
+    .ramo-topo-2 {
+        top: 0%;
+        left: 58%;
+        width: 46%;
+        max-width: 1500px;
+        z-index: 20;
+        transform: scaleX(-1);
+    }
+
+    .borboleta-1 {
+        top: 18%;
+        left: 8%;
+        width: 9%;
+        transform: scaleX(-1);
+    }
+
+    .passaro {
+        top: 18%;
+        right: 8%;
+        width: 11%;
+    }
+
+    .borboleta-3 {
+        bottom: 60%;
+        left: 8%;
+        width: 7%;
+    }
+
+    .coelho {
+        bottom: 17%;
+        left: 12%;
+        width: 9%;
+    }
+
+    .pedra {
+        bottom: 15%;
+        right: 10%;
+        width: 7%;
+    }
+
+    .arbusto {
+        bottom: 15%;
+        left: -9%;
+        width: 25%;
+    }
+
+    .noivos-ilustracao {
+      bottom: -2%;
+        width: 55%;
+        margin-left: 6%;
+    }
+
+    .flor-rodape-esquerda {
+        bottom: -1%;
+        left: -8%;
+        width: 35%;
+    }
+
+    .flor-rodape-direita {
+        bottom: -1%;
+        right: -8%;
+        width: 35%;
+    }
+
+    .ramo-branco {
+        bottom: -5%;
+        left: 21%;
+        width: 15%;
+        transform: scaleX(-1);
+    } 
+}
+
+ @media (max-width: 380px) {
+    
+     .frase {
+        font-size: 90%;
+        margin-top: -16%;
         margin-bottom: 1rem;
         line-height: 1.1;
     }
@@ -449,10 +597,10 @@ body, html {
         width: 25%;
     }
 
-    .noivos-ilustracao {
+         .noivos-ilustracao {
       bottom: -2%;
-        width: 45%;
-        margin-left: 6%;
+        width: 43%;
+        margin-left: 5%;
     }
 
     .flor-rodape-esquerda {
@@ -472,5 +620,51 @@ body, html {
         left: 21%;
         width: 15%;
         transform: scaleX(-1);
+    } 
+    }
+
+    /* ============================================= */
+/* ===== ESTILOS PARA O CONTADOR REGRESSIVO ===== */
+/* ============================================= */
+
+#contador {
+    display: flex;
+    gap: 1rem; /* Espaço entre os blocos (dias, horas, etc) */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Crimson Pro', serif;
+    font-weight: normal;
+    text-transform: none; /* Garante que não fique em maiúsculas */
+}
+
+.contador-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contador-numero {
+    font-size: 2rem; /* Tamanho do número */
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contador-texto {
+    font-size: 0.7rem; /* Tamanho do texto (Dias, Horas...) */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajustes para o contador no celular */
+@media (max-width: 768px) {
+    #contador {
+        gap: 0.8rem;
+    }
+    .contador-numero {
+        font-size: 1.5rem;
+    }
+    .contador-texto {
+        font-size: 0.6rem;
     }
 }
