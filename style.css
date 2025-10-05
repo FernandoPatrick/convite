@@ -22,6 +22,7 @@ body, html {
     /* font-weight: normal; */
     font-display: swap;
 }
+
 /* @font-face {
   font-family: 'Crimson Pro';
   src: url('./fonte/Crimson_Pro/static/CrimsonPro-Regular.ttf') format('truetype');
@@ -101,18 +102,18 @@ body, html {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
     font-family: 'Crimson Pro', serif;
     text-transform: uppercase;
-     letter-spacing: 0.9px;
+    letter-spacing: 0.9px;
 }
 
 .nomes {
     font-family: 'TSKaewpet', cursive;
     font-size: 6vw;
-    font-weight: normal; 
+    font-weight: normal;
     line-height: 0.5;
     color: #706842;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-     text-shadow: 0px 0px 1px #e9e4d9, 0px 0px 1px #e9e4d9;
+    text-shadow: 0px 0px 1px #e9e4d9, 0px 0px 1px #e9e4d9;
 
     /* (Opcional) Melhora a renderização da fonte em algumas telas */
     -webkit-font-smoothing: antialiased;
@@ -293,13 +294,13 @@ body, html {
     left: 50%;
     bottom: 20px;
     z-index: 150;
-    height: 2rem;
+    height: 1.8rem;
     width: 90%;
     max-width: 500px;
     transform: translateX(-50%);
-    border-radius: 25px;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
 }
 
 .plyr--audio .plyr__controls {
@@ -308,7 +309,8 @@ body, html {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding-top: 1px;
-    padding-bottom: 13px;
+    padding-bottom: 1px;
+      height: 1.8rem;
 }
 
 .plyr__time {
@@ -352,7 +354,7 @@ body, html {
     }
 
     .convocacao {
-                font-size: 13px;
+        font-size: 13px;
         margin-bottom: 15px;
     }
 
@@ -385,7 +387,7 @@ body, html {
     }
 
     .botoes-info img {
-              width: 30px;
+        width: 30px;
         height: 39px;
         max-width: initial;
         max-height: initial;
@@ -450,7 +452,7 @@ body, html {
     }
 
     .noivos-ilustracao {
-      bottom: -2%;
+        bottom: -2%;
         width: 55%;
         margin-left: 6%;
     }
@@ -472,12 +474,12 @@ body, html {
         left: 21%;
         width: 15%;
         transform: scaleX(-1);
-    } 
+    }
 }
 
- @media (max-width: 380px) {
-    
-     .frase {
+@media (max-width: 380px) {
+
+    .frase {
         font-size: 90%;
         margin-top: -16%;
         margin-bottom: 1rem;
@@ -500,7 +502,7 @@ body, html {
     }
 
     .convocacao {
-                font-size: 13px;
+        font-size: 13px;
         margin-bottom: 15px;
     }
 
@@ -533,7 +535,7 @@ body, html {
     }
 
     .botoes-info img {
-              width: 30px;
+        width: 30px;
         height: 39px;
         max-width: initial;
         max-height: initial;
@@ -597,8 +599,8 @@ body, html {
         width: 25%;
     }
 
-         .noivos-ilustracao {
-      bottom: -2%;
+    .noivos-ilustracao {
+        bottom: -2%;
         width: 43%;
         margin-left: 5%;
     }
@@ -620,22 +622,24 @@ body, html {
         left: 21%;
         width: 15%;
         transform: scaleX(-1);
-    } 
     }
+}
 
-    /* ============================================= */
+/* ============================================= */
 /* ===== ESTILOS PARA O CONTADOR REGRESSIVO ===== */
 /* ============================================= */
 
 #contador {
     display: flex;
-    gap: 1rem; /* Espaço entre os blocos (dias, horas, etc) */
+    gap: 1rem;
+    /* Espaço entre os blocos (dias, horas, etc) */
     justify-content: center;
     align-items: center;
     width: 100%;
     font-family: 'Crimson Pro', serif;
     font-weight: normal;
-    text-transform: none; /* Garante que não fique em maiúsculas */
+    text-transform: none;
+    /* Garante que não fique em maiúsculas */
 }
 
 .contador-bloco {
@@ -645,13 +649,15 @@ body, html {
 }
 
 .contador-numero {
-    font-size: 2rem; /* Tamanho do número */
+    font-size: 2rem;
+    /* Tamanho do número */
     font-weight: 700;
     line-height: 1;
 }
 
 .contador-texto {
-    font-size: 0.7rem; /* Tamanho do texto (Dias, Horas...) */
+    font-size: 0.7rem;
+    /* Tamanho do texto (Dias, Horas...) */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -661,9 +667,11 @@ body, html {
     #contador {
         gap: 0.8rem;
     }
+
     .contador-numero {
         font-size: 1.5rem;
     }
+
     .contador-texto {
         font-size: 0.6rem;
     }
