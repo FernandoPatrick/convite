@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     telaEntrada.style.display = 'none';
                 });
             }
+            // Chama a função para iniciar o efeito das folhas
+            iniciarEfeitoFolhas();
         });
     }
 
@@ -53,45 +55,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    // --- LÓGICA PARA O EFEITO DE FOLHAS CAINDO NA TELA TODA ---
-    const folhasContainer = document.getElementById('folhas-container');
-    if (folhasContainer) {
-        const imagensFolhas = ['./images/folha.png', './images/folha-2.png'];
-        const quantidadeDeFolhas = 40; // Ajuste para mais ou menos folhas
+    // --- LÓGICA PARA O EFEITO DE FOLHAS CAINDO E GIRANDO (SEM ATRASO) ---
+    function iniciarEfeitoFolhas() {
+        const folhasContainer = document.getElementById('folhas-container');
+        if (folhasContainer) {
+            const imagensFolhas = ['./images/folha.png', './images/folha-2.png'];
+            const quantidadeDeFolhas = 40;
 
-        for (let i = 0; i < quantidadeDeFolhas; i++) {
-            // Usamos setTimeout para não criar todas as folhas de uma vez e travar o navegador
-            setTimeout(() => {
-                const folha = document.createElement('div');
-                folha.classList.add('folha');
-                
-                folha.style.backgroundImage = `url(${imagensFolhas[Math.floor(Math.random() * imagensFolhas.length)]})`;
-                
-                // PONTO DE PARTIDA ALEATÓRIO (TOPO OU ESQUERDA)
-                if (Math.random() > 0.5) {
-                    folha.style.top = `-${Math.random() * 20}vh`; // Começa acima da tela
-                    folha.style.left = Math.random() * 100 + 'vw';
-                } else {
-                    folha.style.left = `-${Math.random() * 20}vw`; // Começa à esquerda da tela
-                    folha.style.top = Math.random() * 100 + 'vh';
-                }
-                
-                // Duração, atraso, tamanho e opacidade aleatórios
-                folha.style.animationDuration = (Math.random() * 8 + 7) + 's'; // Duração entre 7s e 15s
-                folha.style.animationDelay = Math.random() * 10 + 's';
-                const tamanho = Math.random() * 1.5 + 1; // Tamanho entre 1vw e 2.5vw
-                folha.style.width = tamanho + 'vw';
-                folha.style.height = tamanho + 'vw';
-                folha.style.opacity = Math.random() * 0.7 + 0.3;
+            for (let i = 0; i < quantidadeDeFolhas; i++) {
+                // Atraso mínimo apenas para a criação dos elementos
+                setTimeout(() => {
+                    const folha = document.createElement('div');
+                    folha.classList.add('folha');
+                    
+                    folha.style.backgroundImage = `url(${imagensFolhas[Math.floor(Math.random() * imagensFolhas.length)]})`;
+                    
+                    if (Math.random() > 0.5) {
+                        folha.style.top = `-${Math.random() * 20}vh`;
+                        folha.style.left = Math.random() * 100 + 'vw';
+                    } else {
+                        folha.style.left = `-${Math.random() * 20}vw`;
+                        folha.style.top = Math.random() * 100 + 'vh';
+                    }
+                    
+                    folha.style.animationDuration = (Math.random() * 8 + 7) + 's';
+                    
+                    // A LINHA QUE CAUSA O ATRASO FOI REMOVIDA DESTA VERSÃO
+                    // folha.style.animationDelay = Math.random() * 10 + 's';
+                    
+                    const tamanho = Math.random() * 1.5 + 1;
+                    folha.style.width = tamanho + 'vw';
+                    folha.style.height = tamanho + 'vw';
+                    folha.style.opacity = Math.random() * 0.7 + 0.3;
 
-                folhasContainer.appendChild(folha);
+                    folha.style.setProperty('--random-rotate-start', `${Math.random() * 360}deg`);
 
-                // Otimização: remove a folha do DOM após a animação
-                folha.addEventListener('animationend', () => {
-                    folha.remove();
-                });
-            }, i * 400); // Cria as folhas com um pequeno intervalo entre elas
+                    folhasContainer.appendChild(folha);
+
+                    folha.addEventListener('animationend', () => {
+                        folha.remove();
+                    });
+                }, i * 100); // Atraso de criação baixo para início rápido
+            }
         }
     }
-
 });

@@ -686,29 +686,27 @@ body, html {
     height: 100%;
     overflow: hidden;
     pointer-events: none;
-    /* Garante que as folhas não atrapalhem os cliques */
     z-index: 120;
-    /* Fica na frente da maioria dos elementos, mas atrás do player */
 }
 
 .folha {
     position: absolute;
-    top: -10%;
-    /* Começa acima da tela */
     background-size: contain;
     background-repeat: no-repeat;
-    animation: cair linear infinite;
+    animation: cair-na-diagonal linear infinite;
 }
 
-@keyframes cair {
+/* Animação ATUALIZADA para trajetória diagonal COM ROTAÇÃO */
+@keyframes cair-na-diagonal {
     from {
-        /* O estado inicial é definido pelo JS (posição e rotação) */
-        transform: rotate(0deg);
+        /* O estado inicial (posição) é definido pelo JS */
+        /* Inicia com uma rotação aleatória */
+        transform: translateX(0) translateY(0) rotate(var(--random-rotate-start, 0deg));
         opacity: 1;
     }
     to {
-        /* Move a folha 100% da largura da tela para a direita e 100% da altura para baixo */
-        transform: translateX(100vw) translateY(100vh) rotate(720deg);
+        /* Move a folha através da tela inteira e finaliza com rotação aleatória */
+        transform: translateX(100vw) translateY(100vh) rotate(calc(var(--random-rotate-start, 0deg) + 720deg));
         opacity: 0;
     }
 
