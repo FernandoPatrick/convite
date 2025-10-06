@@ -194,6 +194,8 @@ body, html {
     width: 5vw;
     /* max-width: 60px; */
     z-index: 15;
+    transform: scaleX(-1);
+
 }
 
 .passaro {
@@ -398,27 +400,26 @@ body, html {
     }
 
     .borboleta-1 {
-        top: 18%;
-        left: 8%;
-        width: 9%;
-        transform: scaleX(-1);
+        top: 16%;
+        left: 5%;
+        width: 12%;
     }
 
     .passaro {
-              top: 20%;
+        top: 20%;
         right: -2%;
         width: 55%;
     }
 
     .borboleta-3 {
-        bottom: 60%;
-        left: 8%;
+        bottom: 26%;
+        left: 16%;
         width: 7%;
     }
 
     .coelho {
         bottom: 17%;
-        left: 12%;
+        left: 13%;
         width: 9%;
     }
 
@@ -459,6 +460,13 @@ body, html {
         transform: scaleX(-1);
     }
 }
+
+
+
+/* --------------------------------------------------------- */
+
+
+
 
 @media (max-width: 380px) {
     .frase {
@@ -517,8 +525,8 @@ body, html {
     }
 
     .botoes-info img {
-        width: 40px;
-        height: 45px;
+        width: 32px;
+        height: 38px;
         max-width: initial;
         max-height: initial;
         margin-top: -50%;
@@ -543,21 +551,20 @@ body, html {
     }
 
     .borboleta-1 {
-        top: 14%;
-        left: 8%;
-        width: 9%;
-        transform: scaleX(-1);
+        top: 23%;
+        left: 5%;
+        width: 13%;
     }
 
     .passaro {
-                top: 23%;
+        top: 23%;
         right: -2%;
         width: 55%;
     }
 
     .borboleta-3 {
-        bottom: 60%;
-        left: 8%;
+        bottom: 27%;
+        left: 21%;
         width: 7%;
     }
 
@@ -704,6 +711,7 @@ body, html {
         transform: translateX(0) translateY(0) rotate(var(--random-rotate-start, 0deg));
         opacity: 1;
     }
+
     to {
         /* Move a folha através da tela inteira e finaliza com rotação aleatória */
         transform: translateX(100vw) translateY(100vh) rotate(calc(var(--random-rotate-start, 0deg) + 720deg));
