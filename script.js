@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function iniciarEfeitoFolhas() {
         const folhasContainer = document.getElementById('folhas-container');
         if (folhasContainer) {
-            const imagensFolhas = ['./images/folha.png', './images/folha-2.png'];
+            const imagensFolhas = ['./images/folha-3.png', './images/folha-4.png', './images/folha-5.png'];
             const quantidadeDeFolhas = 40;
 
             for (let i = 0; i < quantidadeDeFolhas; i++) {
