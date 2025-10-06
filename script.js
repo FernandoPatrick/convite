@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // A LINHA QUE CAUSA O ATRASO FOI REMOVIDA DESTA VERSÃO
                     // folha.style.animationDelay = Math.random() * 10 + 's';
                     
-                    const tamanho = Math.random() * 1.5 + 1;
+                    const tamanho = Math.random() * 4 + 1;
                     folha.style.width = tamanho + 'vw';
                     folha.style.height = tamanho + 'vw';
                     folha.style.opacity = Math.random() * 0.7 + 0.3;
