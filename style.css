@@ -17,19 +17,10 @@ body, html {
 
 @font-face {
     font-family: 'TSKaewpet';
-    src: url(./fonte/TS-kaewpet-NP.ttf) format('truetype');
+    src: url(./fonte/TS-kaewpet-NP.ttf);
     font-style: normal;
-    /* font-weight: normal; */
     font-display: swap;
 }
-
-/* @font-face {
-  font-family: 'Crimson Pro';
-  src: url('./fonte/Crimson_Pro/static/CrimsonPro-Regular.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-} */
 
 /* ===== TELA DE ENTRADA ===== */
 #telaEntrada {
@@ -59,7 +50,7 @@ body, html {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
     transition: transform 0.2s ease;
 }
 
@@ -112,10 +103,7 @@ body, html {
     line-height: 0.5;
     color: #706842;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     text-shadow: 0px 0px 1px #e9e4d9, 0px 0px 1px #e9e4d9;
-
-    /* (Opcional) Melhora a renderização da fonte em algumas telas */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -169,10 +157,6 @@ body, html {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
     font-family: 'Crimson Pro', serif;
 }
-
-/* .botoes-info a:hover {
-
-} */
 
 .botoes-info img {
     width: 4vw;
@@ -308,9 +292,8 @@ body, html {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    padding-top: 1px;
-    padding-bottom: 1px;
-      height: 1.8rem;
+    padding: 1px 0 1px 0;
+    height: 1.8rem;
 }
 
 .plyr__time {
@@ -478,7 +461,6 @@ body, html {
 }
 
 @media (max-width: 380px) {
-
     .frase {
         font-size: 90%;
         margin-top: -16%;
@@ -557,8 +539,6 @@ body, html {
         top: 0%;
         left: 58%;
         width: 46%;
-        max-width: 1500px;
-        z-index: 20;
         transform: scaleX(-1);
     }
 
@@ -625,21 +605,16 @@ body, html {
     }
 }
 
-/* ============================================= */
 /* ===== ESTILOS PARA O CONTADOR REGRESSIVO ===== */
-/* ============================================= */
-
 #contador {
     display: flex;
     gap: 1rem;
-    /* Espaço entre os blocos (dias, horas, etc) */
     justify-content: center;
     align-items: center;
     width: 100%;
     font-family: 'Crimson Pro', serif;
     font-weight: normal;
     text-transform: none;
-    /* Garante que não fique em maiúsculas */
 }
 
 .contador-bloco {
@@ -650,19 +625,16 @@ body, html {
 
 .contador-numero {
     font-size: 2rem;
-    /* Tamanho do número */
     font-weight: 700;
     line-height: 1;
 }
 
 .contador-texto {
     font-size: 0.7rem;
-    /* Tamanho do texto (Dias, Horas...) */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Ajustes para o contador no celular */
 @media (max-width: 768px) {
     #contador {
         gap: 0.8rem;
@@ -675,4 +647,69 @@ body, html {
     .contador-texto {
         font-size: 0.6rem;
     }
+}
+
+/* ======================================================= */
+/* ===== ANIMAÇÃO DE FLUTUAÇÃO PARA ÍCONES ===== */
+/* ======================================================= */
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.botoes-info a img {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.botoes-info a:nth-child(2) img {
+    animation-delay: 0.5s;
+}
+
+
+/* ======================================================= */
+/* ===== EFEITO DE FOLHAS CAINDO (NOVO) ===== */
+/* ======================================================= */
+#folhas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    /* Garante que as folhas não atrapalhem os cliques */
+    z-index: 120;
+    /* Fica na frente da maioria dos elementos, mas atrás do player */
+}
+
+.folha {
+    position: absolute;
+    top: -10%;
+    /* Começa acima da tela */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: cair linear infinite;
+}
+
+@keyframes cair {
+    from {
+        /* O estado inicial é definido pelo JS (posição e rotação) */
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        /* Move a folha 100% da largura da tela para a direita e 100% da altura para baixo */
+        transform: translateX(100vw) translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+
 }

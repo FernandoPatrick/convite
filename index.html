@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convite de Casamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento - Fernando & Roseane</title>
 
+    <link rel="icon" type="image/png" href="./images/fav-icon-2.png">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="./style.css">
 
-<link rel="icon" type="image/png" href="./images/fav-icon-2.png">
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-
-
-<!-- Google Fonts: Crimson Pro -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-</style>
-
-
-<!-- CSS principal -->
-<link rel="stylesheet" href="./style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <div id="telaEntrada">
@@ -33,6 +24,8 @@
     </audio>
 
     <div class="convite-container">
+        
+        <div id="folhas-container"></div>
 
         <img src="./images/ramo-cabecalho.png" alt="Ramo no topo" class="deco-img ramo-topo">
         <img src="./images/ramo-cabecalho.png" alt="Ramo no topo" class="deco-img ramo-topo-2">
@@ -51,27 +44,26 @@
                 <h2 class="nomes-rose">Roseane</h2>
             </div>
             <div id="contador" class="convocacao">
-    <div class="contador-bloco">
-        <span id="dias" class="contador-numero">00</span>
-        <span class="contador-texto">Dias</span>
-    </div>
-    <div class="contador-bloco">
-        <span id="horas" class="contador-numero">00</span>
-        <span class="contador-texto">Horas</span>
-    </div>
-    <div class="contador-bloco">
-        <span id="minutos" class="contador-numero">00</span>
-        <span class="contador-texto">Minutos</span>
-    </div>
-    <div class="contador-bloco">
-        <span id="segundos" class="contador-numero">00</span>
-        <span class="contador-texto">Segundos</span>
-    </div>
-</div>
+                <div class="contador-bloco">
+                    <span id="dias" class="contador-numero">00</span>
+                    <span class="contador-texto">Dias</span>
+                </div>
+                <div class="contador-bloco">
+                    <span id="horas" class="contador-numero">00</span>
+                    <span class="contador-texto">Horas</span>
+                </div>
+                <div class="contador-bloco">
+                    <span id="minutos" class="contador-numero">00</span>
+                    <span class="contador-texto">Minutos</span>
+                </div>
+                <div class="contador-bloco">
+                    <span id="segundos" class="contador-numero">00</span>
+                    <span class="contador-texto">Segundos</span>
+                </div>
+            </div>
 
             <div class="info-data">
-                <span>21</span><span class="barra">|</span><span>DEZEMBRO</span><span
-                    class="barra">|</span><span>2025</span>
+                <span>21</span><span class="barra">|</span><span>DEZEMBRO</span><span class="barra">|</span><span>2025</span>
             </div>
             <p class="info-hora">ÀS 16 HORAS</p>
 
@@ -80,7 +72,7 @@
                     <img src="./images/presente.png" alt="Lista de Presentes">
                     <span>LISTA DE<br> PRESENTES</span>
                 </a>
-                <a href="https://maps.app.goo.gl/smWS2qknaUCkRp4b9" class="botao-link" id="2">
+                <a href="#" class="botao-link" id="como-chegar-link">
                     <img src="./images/endereco.png" alt="Como Chegar">
                     <span>COMO CHEGAR</span>
                 </a>
