@@ -485,7 +485,7 @@ body, html {
 
 
 
-@media (max-width: 450px) {
+@media (max-width: 430px) {
     .frase {
         font-size: 90%;
         margin-top: -16%;
@@ -611,7 +611,7 @@ body, html {
 
     .noivos-ilustracao {
         bottom: -2%;
-        width: 38%;
+        width: 39%;
         margin-left: 4%;
     }
 
