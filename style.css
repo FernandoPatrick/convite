@@ -62,7 +62,7 @@ body, html {
 /* ===== CONTAINER PRINCIPAL ===== */
 .convite-container {
     width: 100vw;
-    /* max-width: 500px; */
+    /* max-width: 900px; */
     margin: 0 auto;
     height: 100vh;
     background-image: url('./images/background.jpeg');
@@ -485,7 +485,7 @@ body, html {
 
 
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     .frase {
         font-size: 90%;
         margin-top: -16%;
@@ -611,8 +611,8 @@ body, html {
 
     .noivos-ilustracao {
         bottom: -2%;
-        width: 40%;
-        margin-left: 5%;
+        width: 9rem;
+        margin-left: 4%;
     }
 
     .flor-rodape-esquerda {
