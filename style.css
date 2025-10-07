@@ -400,13 +400,19 @@ body, html {
     }
 
     .borboleta-1 {
-        top: 16%;
+        top: 29%;
         left: 5%;
         width: 12%;
     }
 
+    .borboleta-2 {
+        bottom: 34%;
+        left: 84%;
+        width: 7%;
+    }
+
     .passaro {
-        top: 20%;
+        top: 16%;
         right: -2%;
         width: 55%;
     }
@@ -551,13 +557,19 @@ body, html {
     }
 
     .borboleta-1 {
-        top: 23%;
+        top: 32%;
         left: 5%;
         width: 13%;
     }
 
+    .borboleta-2 {
+        bottom: 38%;
+        left: 65%;
+        width: 7%;
+    }
+
     .passaro {
-        top: 23%;
+        top: 15%;
         right: -2%;
         width: 55%;
     }
