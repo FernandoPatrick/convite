@@ -769,9 +769,9 @@ body, html {
     }
 }
 
-/* ======================================================= */
+
 /* ===== ANIMAÇÃO DE FLUTUAÇÃO PARA ÍCONES ===== */
-/* ======================================================= */
+
 @keyframes flutuar {
     0% {
         transform: translateY(0);
@@ -795,9 +795,9 @@ body, html {
 }
 
 
-/* ======================================================= */
+
 /* ===== EFEITO DE FOLHAS CAINDO (NOVO) ===== */
-/* ======================================================= */
+
 #folhas-container {
     position: absolute;
     top: 0;
@@ -816,7 +816,7 @@ body, html {
     animation: cair-na-diagonal linear infinite;
 }
 
-/* Animação ATUALIZADA para trajetória diagonal COM ROTAÇÃO */
+
 @keyframes cair-na-diagonal {
     from {
         /* O estado inicial (posição) é definido pelo JS */
