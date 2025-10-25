@@ -167,8 +167,22 @@ body, html {
     gap: 0.8rem;
     font-weight: bold;
     font-size: 0.9vw;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    /* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); */
     font-family: 'Crimson Pro', serif;
+    color: #5d553c; /* Cor principal do texto */
+
+
+    /* Cria um contorno extremamente fino (0.3px) com branco semi-transparente (50%) */
+    /* -webkit-text-stroke-width: 0.1px; 
+    -webkit-text-stroke-color: rgba(255, 255, 200, 0.1);  */
+
+
+    color: #5d553c; 
+    text-shadow: 
+        -0.5px -0.5px 0 #fff,  /* Sombra para cima e esquerda */
+         1px 0.1px 0 #fff,  /* Sombra para cima e direita */
+        -1px  1px 0 #fff,  /* Sombra para baixo e esquerda */
+         1px  1px 0 #fff;  /* Sombra para baixo e direita */
 }
 
 .botoes-info img {
@@ -623,7 +637,7 @@ body, html {
 
     .noivos-ilustracao {
         bottom: -2%;
-        width: 50%;
+        width: 40vw;
         margin-left: 4%;
     }
 
@@ -650,7 +664,7 @@ body, html {
 @media(max-width: 380px) {
     .noivos-ilustracao {
         bottom: -2%;
-        width: 45%;
+        width: 40vw;
         margin-left: 4%;
     }
 
@@ -659,10 +673,30 @@ body, html {
     }
 }
 
+@media(max-width: 375px) {
+    .noivos-ilustracao {
+        bottom: -2%;
+        width: 35vw;
+        margin-left: 4%;
+    }
+
+    .botoes-info {
+        margin-top: -2%;
+    }
+}
+
+@media screen and (width: 375px) and (height: 667px) {
+   .noivos-ilustracao {
+        bottom: -2%;
+        width: 35vw;
+        margin-left: 4%;
+    }
+}
+
 @media(max-width: 350px) {
     .noivos-ilustracao {
         bottom: -2%;
-        width: 50%;
+        width: 40vw;
         margin-left: 4%;
     }
 
@@ -674,12 +708,12 @@ body, html {
 @media(max-width: 360px) {
     .noivos-ilustracao {
         bottom: -2%;
-        width: 45%;
+        width: 37vw;
         margin-left: 4%;
     }
 
     .botoes-info {
-        margin-top: 10%;
+        margin-top: -10%;
     }
 }
 
@@ -716,7 +750,7 @@ body, html {
 @media(max-width: 320px) {
     .noivos-ilustracao {
         bottom: -2%;
-        width: 60%;
+        width: 35vw;
         margin-left: 4%;
     }
 
